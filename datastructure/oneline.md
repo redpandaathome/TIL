@@ -34,10 +34,10 @@
 
 24. Binary Heaps
 -Similar to binsary search trees with some different rules  
-   1)MaxBinaryHeap: Parent node > child node  
+   * 1)MaxBinaryHeap: Parent node > child node  
 ![alt text](https://github.com/redpandaathome/TIL/blob/main/datastructure/image/maxbinaryheap.png?raw=true)  
 
-   2)MinBinaryHeap: <  
+   * 2)MinBinaryHeap: <  
 
 25. Hash Tables
 
