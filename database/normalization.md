@@ -22,16 +22,16 @@ BUT minimizing Redundancy
 DIVIDE AND RULE
 ---
 Types of Normalization
-1. 1st Normal From
+1. 1st Normal Form
 -Every table in your db should at least follow the 1st normal form, always.
 (1)Each column should contain atomic values
 (2)A Column should contain values that are of the same type. ex)birthday: 16-10-1991,...
 (3)Each column should have a unique name.
 (4)Order in which data is saved doesn't matter
 
-2. 2nd Normal From
+2. 2nd Normal Form
 https://youtu.be/R7UblSu4744
-3. 3rd Normal From
+3. 3rd Normal Form
 4. BCNF
 
 

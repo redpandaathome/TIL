@@ -36,7 +36,9 @@
 -Similar to binsary search trees with some different rules
 1)MaxBinaryHeap: Parent node > child node
 ![alt text](https://github.com/redpandaathome/TIL/datastructure/image/maxbinaryheap.png?raw=true)
+
 2)MinBinaryHeap: <
+
 25. Hash Tables
 
 26. Graphs
