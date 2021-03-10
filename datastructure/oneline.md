@@ -35,9 +35,9 @@
 24. Binary Heaps
 -Similar to binsary search trees with some different rules  
    * 1)MaxBinaryHeap: Parent node > child node  
-![alt text](https://github.com/redpandaathome/TIL/blob/main/datastructure/image/maxbinaryheap.png?raw=true&s=250)  
-
-   * 2)MinBinaryHeap: <  
+<img src="./image/maxbinaryheap.png" width="350" height="350">
+   
+   * 2)MinBinaryHeap:
 
    * Why? Very useful data structures for sorting, and implementing other data structures like `Priority Queues`
    - used with `graph traversal algorithms` as well.
@@ -53,7 +53,7 @@
    #### ✨!
 
    ```javascript
-   //[55, 39,41,18,27,12,33]
+   //[55,39,41,18,27,12,33]
 
    class HeapMyVersion{
       constructor(){
