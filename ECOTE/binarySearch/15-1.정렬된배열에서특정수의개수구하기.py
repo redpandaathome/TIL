@@ -1,4 +1,4 @@
-# 단순히 정렬된 배열에서 특정 뎅터를 찾을 경우 직접 이진탐색을 구현할 필요없ㅇ, 파이썬 bisect 모듈 사용
+# 단순히 정렬된 배열에서 특정 데이터를 찾을 경우 직접 이진탐색을 구현할 필요없ㅇ, 파이썬 bisect 모듈 사용
 
 import bisect
 n, target = map(int,input().split())
@@ -13,4 +13,3 @@ if result ==0:
 else:
   print(result)
 
-  

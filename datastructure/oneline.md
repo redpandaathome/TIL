@@ -293,8 +293,62 @@
    </p>
    </details>
 
-25. Hash Tables
+#
+25. Hash Tables  
+store key-value pairs
+similar to arrays but not ordered
+"Faster" for finding, adding, removing values than arrays
 
+```
+Python - Dictionaries
+Js - Objects, Maps
+Java, Go, Scala - Map
+Ruby - Hashes
+```
+
+* Good Hash?
+1. Fast(constant time)
+2. Distributes uniformly
+3. Deterministic(same input -> same output)
+
+## Simple Hashing->improved Hashing
+   ...🏋🏻‍♀️
+
+   <details><summary>CLICK ME</summary>
+   <p>
+
+   #### babyHash <-> hash
+
+   ```javascript
+   function babyHash(key, arrayLen) {
+    let total = 0;
+    for( let char of key ){ // 💩 not constant time - linear in key length
+        //map "a" to 1, b to "2", "c" to 3, etc.
+        let value = char.charCodeAt(0) - 96;
+        total = (total + value) % arrayLen; //💩 could be a bit more random
+    }
+    return total;
+   }
+
+
+   function hash(key, arrayLen) {
+      let total = 0;
+      // ✨ prime numbers help in spreading out the keys more uniformly
+      let WEIRD_PRIME = 31; 
+      for( let i = 0; i < Math.min(key.length, 100); i++){ //✨
+         let char = key[i];
+         let value = char.charCodeAt(0) - 96;
+         total = (total * WEIRD_PRIME + value) % arrayLen; //✨
+      }
+      return total;
+   }
+
+   ```
+
+   </p>
+   </details>
+
+#
 26. Graphs
 
 27. Graph Traversal
