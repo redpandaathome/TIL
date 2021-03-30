@@ -1,3 +1,7 @@
+#✨✨✨✨✨
+# if amount >= coin then
+# comb[amount] += comb[amount-coin]
+
 n = int(input())
 
 arr = [3,5]
