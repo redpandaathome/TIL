@@ -1,0 +1,6 @@
+const {odd, even} = require('./var')
+const checkNum = require('./func')
+const name = require('./var2')
+console.log(odd)
+console.log(checkNum(10))
+console.log(name)
