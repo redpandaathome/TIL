@@ -1,3 +1,5 @@
+# 관계형 데이터베이스에서 중복을 최소화하기 위해 데이터를 구조화하는 작업
+
 `normalization` is
 a technique to organize data -> multiple related tables
 to minimize DATA REDUNDANCY
@@ -31,6 +33,24 @@ Types of Normalization
 
 2. 2nd Normal Form
 https://youtu.be/R7UblSu4744
+ (1) It should be in 1st Normal Form
+ (2) It should not have any Partial Dependencies.
+What is dependency?
+
+Below student table, every coulum data is dependent on student_id column(primary key) - dependency in a table
+
+<img src="./image/normalization/1.png" width="450" height="350">
+<img src="./image/normalization/2.png" width="450" height="350">
+
+</br></br>
+Then, what's partial dependency?
+
+<img src="./image/normalization/3.png" width="450" height="350">
+<img src="./image/normalization/4.png" width="450" height="350">
+<img src="./image/normalization/5.png" width="450" height="350">
+<img src="./image/normalization/6.png" width="450" height="350">
+
+</br></br>
 3. 3rd Normal Form
 4. BCNF
 
