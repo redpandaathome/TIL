@@ -6,6 +6,7 @@ for i in range(n):
     t.append(a)
     p.append(b)
 
+# ✨✨✨✨✨ 뒤에서 접근. n=6~0 i번째에서 t[i]+i = 총걸릴시간 <=n(주어진시간), 뒤에서 부터 최적 dp[i] 업데이트!
 max_v = 0
 dp = [0 for i in range(n+1)]
 for i in range(n-1, -1, -1): 
