@@ -20,7 +20,7 @@ Error Exception Event 도 다 오브젝트로 만들고 관리할 수
 ‘명사’로 이름
 데이터 - fields, property
 Function - methods 
-대게는 클래스로 정의
+대개는 클래스로 정의
 
 :오브젝트의 생김새를 묘사(청사진)
 Class (붕어빵 틀) -> 데이터 넣어서 -> 붕어빵(object)

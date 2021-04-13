@@ -27,7 +27,7 @@ b+tree의 경우는 리프단계로 가야 데이터 위치가 있다.
 <br><br>
 ### Balanced Binary Search Tree : O(LogN)
 ### Unbalanced BST: O(N) for search, insert, and delete operations
--> Self balancing tree... => B-Tree
+->🧘🏻‍♀️ Self balancing tree... => B-Tree
 
 <img src="./image/b-tree.png" width="550" height="350">
 
