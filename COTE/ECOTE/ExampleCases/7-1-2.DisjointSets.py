@@ -3,11 +3,12 @@ input = sys.stdin.readline
 
 INF = int(1e9)
 
-
+# ✨☘️
 def find_parent(parent, x):
+    print('find_parent...parent[',x,']=', parent[x])
     if parent[x] != x:
-        return find_parent(parent, parent[x])
-    return x
+        parent[x] = find_parent(parent, parent[x])
+    return parent[x]
 
 
 def union_parent(parent, a, b):
@@ -26,15 +27,11 @@ for i in range(1, v+1):
 
 for _ in range(e):
     a, b = map(int, input().split())
+    print('a,b:', a, b)
     union_parent(parent, a, b)
-
+    print(parent)
 # print(parent) [0, 1, 1, 2, 1, 5, 5]
 
 for i in range(1, v+1):
-    print(find_parent(parent, i))
-
-6 4
-1 4
-2 3
-2 4
-5 6
+    print('i:',i, 'parent: ',find_parent(parent, i))
+    print('updated parent:', parent)
