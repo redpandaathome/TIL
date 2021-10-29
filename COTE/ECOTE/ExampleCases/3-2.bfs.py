@@ -18,13 +18,16 @@ def bfs(graph, start, visited):
   q = deque([start])
   visited[start] = True
   ans.append(start)
-  
+  #✨
   while q:
     v = q.popleft()
     for i in graph[v]:
+      #✨
       if not visited[i]:
         q.append(i)
         ans.append(i)
         visited[i]=True
 bfs(graph,1,visited)
 print(ans)
+
+#bfs - while q...

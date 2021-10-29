@@ -10,6 +10,7 @@ graph = [
    [1,7]
 ]
 
+#✨
 visited = [False]*len(graph)
 ans = []
 def dfs(graph, start, visited):
@@ -20,3 +21,5 @@ def dfs(graph, start, visited):
       dfs(graph, i, visited)
 dfs(graph, 1, visited)
 print(ans)
+
+#dfs - recursive dfs...
