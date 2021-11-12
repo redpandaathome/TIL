@@ -4,7 +4,7 @@
 # 5 7 9
 
 n = int(input())
-#🌺
+# ✨✨✨
 arr = set(map(int, input().split()))
 
 
@@ -12,6 +12,7 @@ m = int(input())
 x = list(map(int, input().split()))
 
 for i in x:
+    # ✨✨✨ set: i in set
     if i in arr:
         print('yes')
     else:

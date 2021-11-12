@@ -1,9 +1,13 @@
-# 5
-# 8 3 7 9 2
-# 3
-# 5 7 9
+#input
+5
+8 3 7 9 2
+3
+5 7 9
 
+#output 
+no yes yes
 
+# Count Sort
 n = int(input())
 arrA = [0] * (1000001)
 # a = list(map(int, input().split()))

@@ -14,3 +14,7 @@ print([[0]*3 for i in range(2)])
 arr=[1,2,3]
 print([x for x in arr if x>=2])
 ##[2,3]
+
+#3. line data input
+import sys
+input_data = sys.stdin.readline().rstrip()
