@@ -1,5 +1,9 @@
-# 4 6
-# 19 15 10 17
+# input
+4 6
+19 15 10 17
+
+#output
+15
 
 n, t = map(int, input().split())
 arr = list(map(int, input().split()))

@@ -12,7 +12,7 @@ q.append((x,y))
 x, y = q.popleft()
 
 
-## 2. ✨heapq - 우선수위큐 자료구조시 사용 *** ✨Dijkstra
+## 2. ✨heapq - 우선순위큐 자료구조시 사용 *** ✨Dijkstra
 #heapq.heappush(q, (0,start)), heapq.heappop(q)
 #vscode 검색 ㄱㄱ
 

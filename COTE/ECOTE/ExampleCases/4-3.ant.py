@@ -1,4 +1,11 @@
 ##✨...헐 다시 풀어보자 🤯
+#input
+4
+1 3 1 5
+
+#output
+8
+
 n = int(input())
 
 arr = list(map(int,input().split()))

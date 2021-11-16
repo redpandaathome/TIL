@@ -1,3 +1,11 @@
+#input
+26
+
+#output
+3
+
+#5로 나눠지면 5로 나눈다/ 3~/ 2~/x-1
+
 n = int(input())
 
 result=0

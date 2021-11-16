@@ -1,3 +1,20 @@
+#input
+2 15
+2
+3
+
+#output
+5
+
+#input2
+3 4
+3
+5
+7
+
+#output2
+-1
+
 n, m = map(int,input().split())
 coins=[]
 for i in range(n):

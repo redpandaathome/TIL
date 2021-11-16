@@ -1,4 +1,10 @@
 #✨
+#input
+3
+
+#output
+5
+
 n = int(input())
 
 d=[0]*1001
