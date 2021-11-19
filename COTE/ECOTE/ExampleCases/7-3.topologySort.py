@@ -39,7 +39,7 @@ def topology_sort():
 topology_sort()
 
 
-
+#input
 7 8
 1 2
 1 5
@@ -49,3 +49,6 @@ topology_sort()
 4 7
 5 6
 6 4
+
+#output
+1 2 5 3 6 4 7

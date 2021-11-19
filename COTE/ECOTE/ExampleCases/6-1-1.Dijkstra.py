@@ -24,6 +24,7 @@ def dijkstra(start):
     
     while q:
         dist, now = heapq.heappop(q)
+        # ✨ filtering already visited node
         if distance[now] < dist:
             continue
         for i in graph[now]:

@@ -43,6 +43,10 @@ for d in distance:
         maxD = max(maxD, d)
 print(count-1, maxD)
 
+#input
 3 2 1
 1 2 4
 1 3 2
+
+#output
+2 4
