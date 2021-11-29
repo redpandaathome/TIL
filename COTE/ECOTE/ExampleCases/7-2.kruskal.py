@@ -27,6 +27,7 @@ edges = []
 result = 0
 for i in range(1, e+1):
     a, b, c = map(int, input().split())
+    # ✨✨✨
     edges.append((c, a, b))
 edges.sort()
 
