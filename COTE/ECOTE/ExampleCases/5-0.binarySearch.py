@@ -20,7 +20,8 @@
 # 1. recursive
 def binary_search(array, target, start, end):
   #✨ in case of mid = (start:5, end:5)//2 = 5 -> start>=end!
-  if start >= end:
+  #  ">" 💜
+  if start > end:
     return None
   mid = (start+end)//2
   if array[mid]==target:
@@ -39,7 +40,7 @@ result = binary_search(array, target, 0, len(array)-1)
 
 print(result)
 
-# 2. repeatitive
+# 2. repetitive
 # Binary search with recursive code
 
 def binary_search(array, target, start, end):
