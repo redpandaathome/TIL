@@ -28,6 +28,7 @@ def dfs(graph, i, myDepth):
 
 ans = False
 for i in range(1, n+1, 1):
+  ### NOOOO : ans = dfs(graph, i, 0), take ans as global variable 🦁
   dfs(graph, i, 0)
   visited[i]=False#✨
   if ans:
