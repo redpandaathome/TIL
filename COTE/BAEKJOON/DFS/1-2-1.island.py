@@ -32,11 +32,14 @@ while True:
     graph.append(list(map(int, sys.stdin.readline().split())))
   # print('graph:', graph)
   count = 0
+  # ✨ x&y, n&m 🤷🏻‍♀️ 
+  # https://www.notion.so/redpandathome/TIL-Python-cote-b52090c21f154868b9f76e60a8aed36e
   visited=[[False]*n for j in range (m)]
   # print('visited:',visited)
   for i in range(m):
     for j in range(n):
       # print('i,j:', i, j)
+      # ✨
       if visited[i][j]==False:  
         if dfs(i, j)== True:
           # print('true..?', i, j)
