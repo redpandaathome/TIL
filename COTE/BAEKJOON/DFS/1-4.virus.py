@@ -28,3 +28,37 @@ count = 0
 dfs(1)
 
 print(count)
+
+### how to deal with count? as 🌏 global? or parameter
+### parameter > can't get returned value like below
+# def dfs(v, count):
+#   visited[v]=True
+#   print("dfs>>>v:",v, ", count:", count)
+#   for i in graph[v]:
+#     if not visited[i]:
+#       count+=1
+#       dfs(i, count)
+
+# count = 0
+# dfs(1, count)
+# print(count) #0
+
+
+
+# 👀 if you want to use parameters instead of global variables...
+# you can use countMax variable like below...
+
+# def dfs(v, count):
+#   global countMax
+#   visited[v]=True
+#   count+=1
+#   countMax = max(count, countMax)
+#   print("dfs>>>v:",v, ", count:", count)
+#   for i in graph[v]:
+#     if not visited[i]:
+#       dfs(i, count)
+
+# count = 0
+# countMax = count
+# dfs(1, count)
+# print(countMax) #4
