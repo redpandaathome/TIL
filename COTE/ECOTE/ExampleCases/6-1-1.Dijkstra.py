@@ -1,4 +1,5 @@
 import heapq
+# heapq 사용해서, visited 불필요!
 import sys
 input = sys.stdin.readline
 INF = int(1e9)

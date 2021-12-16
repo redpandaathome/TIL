@@ -30,6 +30,7 @@ for a in range(1, n+1):
             print(graph[a][b], end=' ')
     print()
 
+#input
 4
 7
 1 2 4
@@ -39,3 +40,9 @@ for a in range(1, n+1):
 3 1 5
 3 4 4
 4 3 2
+
+#output
+0 4 8 6 
+3 0 7 9 
+5 9 0 4 
+7 11 2 0 
