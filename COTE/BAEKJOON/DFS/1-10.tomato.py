@@ -1,10 +1,11 @@
 # https://www.acmicpc.net/problem/7576
 # 토마토 🍅
 # 쉬워보였는데 막상 어어어어엄청 헤맸다.
+# 2022.01.12 - 2nd trial >
 
 import sys
 from collections import deque
-input = sys.stdin.readline()
+input = sys.stdin.readline # 🚨 no ()...
 
 m, n = map(int, input.split())
 # print(n, m)
@@ -23,6 +24,7 @@ dy = [0,0,-1,1]
 
 
 q = deque()
+#✨
 for i in range(n):
     for j in range(m):
         if arr[i][j] == 1:
