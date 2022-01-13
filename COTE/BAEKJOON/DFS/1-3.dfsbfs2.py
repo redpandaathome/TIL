@@ -6,11 +6,11 @@ for i in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-# print("graph:", graph)
+
+#✨ sort needed...
 for i in range(len(graph)):
   graph[i].sort()
 
-# print("sorted graph;", graph)
 visited = [False for i in range(n+1)]
 
 dfs_ans = []

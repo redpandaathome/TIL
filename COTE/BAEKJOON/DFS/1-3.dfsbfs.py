@@ -4,7 +4,7 @@
 #✨
 import sys
 n, m, v = map(int, sys.stdin.readline().split())
-#✨
+#✨ [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 graph = [[0]*(n+1) for i in range(n+1)]
 
 for i in range(m):
