@@ -1,3 +1,7 @@
+#[✅]21.12.10
+#[✅]22.01.18
+#[ ]
+
 import sys
 from collections import deque
 
@@ -6,6 +10,7 @@ dy = [0,0,-1,1,1,-1,-1,1]
 
 def bfs(tempGraph, i,j,count):
   q = deque()
+  # 🙅‍♀️ deque((1,2)) or deque([1,2]) => deque(), deque.append((1,2)) or [1,2]
   q.append((i,j))
   tempGraph[i][j]=2
   while q:
@@ -21,10 +26,9 @@ def bfs(tempGraph, i,j,count):
         continue
       if tempGraph[nx][ny]!=1:
         continue
-
+      #✨ instead of making true-false visit history ...
       tempGraph[nx][ny]=2
       q.append((nx,ny))
-      # print("q.appending++++",nx,ny)
         
 
 input = sys.stdin.readline
@@ -35,6 +39,7 @@ while(True):
   if n==0 and m==0:
     break
   graph = []
+  #✨ n<->m
   for i in range(m):
     tempList = list(map(int, input().split()))
     graph.append(tempList)
