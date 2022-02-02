@@ -1,7 +1,15 @@
 # https://www.acmicpc.net/problem/4963
 # 꼭 다 ㅅ ㅣ.... 🐛
-import sys
-sys.setrecursionlimit(10000)
+# 2nd time 02.Feb.2022 ✅
+# 
+
+# x, y? y, x? 🚨
+# 3 2
+# 1 1 1
+# 1 1 1
+# m, n -> m - y, n - x,
+# ... dx<n, dy<m
+
 dx = [-1,-1,-1,0,0,1,1,1]
 dy = [-1,0,1,-1,1,-1,0,1]
 

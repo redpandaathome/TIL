@@ -1,6 +1,6 @@
 #[✅]21.12.10
 #[✅]22.01.18
-#[ ]
+#[✅]22.01.02
 
 import sys
 from collections import deque
@@ -50,6 +50,7 @@ while(True):
   for i in range(m):
     for j in range(n):
       if graph[i][j]==1:
+        # doesn't need tempGraph if it's shallow copy on compound object... it's fine just to use graph without copying it
         tempGraph = copy.copy(graph)
         bfs(tempGraph, i, j, count)
         count += 1
