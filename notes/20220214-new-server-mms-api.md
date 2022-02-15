@@ -17,4 +17,13 @@ A. Firewall setting trouble shooting... -> partially installed.<br><br>
 Q.How to set git repository?<br>
 A.added new server's newly generated ssh key to github setting. Fixed.<br><br>
 Q2.RDS... options are too limited - Just oracle.<br> Worth of refactoring all the codes from mysql-sequelize to oracle-something?<br>
-A.There's alternative of using sequelize-oracle. But is it really good idea to go for? 💭<br><br>
+A.There's alternative of using sequelize-oracle. But is it really good idea to go for? 💭<br>
+
+A.Making another oci instance and install mysql to use as a RDS instance.<br><br>
+
+## step3.
+- adding .env for prod server and run node<br>
+
+Q. Connection from mysql workbench via ssh was successful. But what about as a RDS using a connection string?
+
+
