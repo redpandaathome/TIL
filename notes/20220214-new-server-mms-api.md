@@ -24,6 +24,11 @@ A.Making another oci instance and install mysql to use as a RDS instance.<br><br
 ## step3.
 - adding .env for prod server and run node<br>
 
-Q. Connection from mysql workbench via ssh was successful. But what about as a RDS using a connection string?
+Q. Connection from mysql workbench via ssh was successful. But what about as a RDS using a connection string?<br>
 
+A. After giving correct privileges to mysql user, I could connect without ssh connection on work bench.
+
+Q. What about connecting on that information? Should test with local server first. 🤔 [ ]
+
+- Setting nginx config with jenkins going on.
 
