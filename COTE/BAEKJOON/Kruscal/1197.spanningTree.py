@@ -1,5 +1,7 @@
 #https://www.acmicpc.net/problem/1197
 
+#2nd[✅] Mar 14 2022
+
 import sys
 input = sys.stdin.readline
 
