@@ -24,3 +24,7 @@ def to_camel_case(text):
     if len(removed) == 0:
         return ''
     return removed[0]+ ''.join([x.capitalize() for x in removed[1:]])
+
+# title(), replace()
+def to_camel_case(text):
+    return text[:1] + text.title()[1:].replace('_', '').replace('-', '')
