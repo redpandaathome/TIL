@@ -4,6 +4,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+//splice(start,numbers)
  var removeDuplicates = function(nums) {
    for(let i=0; i<nums.length; i++){
       let dupNum =0
@@ -24,6 +25,35 @@
 
 
 // IMPROVED
+//splice(start,end,...(new Set(nums)))
 var removeDuplicates = function(nums) {
    nums.splice(0,nums.length,...(new Set(nums)))
+};
+
+//2nd try[💦] - importance of understanding requirements in details... 🤨
+//[ ]
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var removeDuplicates = function(nums) {
+    let cnt=0
+    for(let i=0; i< nums.length; i++){
+        if(nums[i]==nums[i+1]){
+            continue
+        }
+        nums[cnt]=nums[i]
+        cnt+=1
+    }
+    return cnt
+};
+
+//using ++i
+var removeDuplicates = function(nums) {
+    let i = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] != nums[i]) 
+            nums[++i] = nums[j];
+    }
+    return ++i;
 };

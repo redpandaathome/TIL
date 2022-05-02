@@ -6,3 +6,6 @@ class Solution:
                 nums.remove(nums[i])
         
 # remove!
+
+#[👾] 2nd 29.04.2022...
+#[ ]
