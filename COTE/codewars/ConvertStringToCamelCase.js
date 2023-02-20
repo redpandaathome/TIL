@@ -24,7 +24,7 @@ function toCamelCase(str){
 
 
 //IMPROVED
-//NEED TO STUDY REGEX
+//NEED TO STUDY REGEX, \w (The \w metacharacter matches word characters.)
 function toCamelCase(str){
    var regExp=/[-_]\w/ig;
    return str.replace(regExp,function(match){

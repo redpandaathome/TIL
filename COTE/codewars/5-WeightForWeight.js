@@ -32,3 +32,29 @@ function orderWeight(strng) {
      };
    return strng.split(' ').sort(comp).join(' ');
   }
+
+
+//2023.02.20
+//✨ string sort... return str1.localeCompare(str2)
+// num sort return a-b
+function orderWeight(string) {
+  let arr = string.trim().split(" ").map(e=>e.trim())
+  let newArr = []
+  arr.map(e=>{
+    let sum = e.split("").reduce((acc,cur)=>
+      parseInt(acc)+parseInt(cur)
+    , 0)
+    newArr.push([e, sum])
+    return sum
+  })
+
+newArr.sort((a,b)=>{
+  if(a[1]===b[1]){
+    return (''+a[0]).localeCompare(''+b[0])
+  }
+  return a[1]-b[1]
+})
+let result = newArr.map(e=>e[0])
+
+return result.join(' ')
+}

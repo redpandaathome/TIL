@@ -25,3 +25,13 @@ function moveZeros(arr) {
  function moveZeros(arr) {
    return arr.filter(x=>x!==0).concat(arr.filter(x=>x===0))
  }
+
+ // 2023.02.16
+ function moveZeros(arr) {
+  //count numbers of zeros
+  let numsOfZero = arr.filter(e=>e===0).length;
+  //filter zeros
+  let tempArr = arr.filter(e=>e!==0)
+  //add zeros ✨
+  return tempArr.concat(Array(numsOfZero).fill(0))
+}

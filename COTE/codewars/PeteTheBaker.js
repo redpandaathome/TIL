@@ -17,6 +17,7 @@ function cakes(recipe, available) {
    }
  
  //   console.log(countObj)
+ // ✨
    result=Infinity
    Object.keys(countObj).forEach(e=>{
      result=Math.min(result,countObj[e])
@@ -24,6 +25,34 @@ function cakes(recipe, available) {
    })
    return result;
  }
+
+//Second trial 
+function cakes(recipe, available) {
+  let keys = Object.keys(recipe).sort()
+  let availableKeys = Object.keys(available).sort()
+  if(keys.length > availableKeys.length) return 0
+  
+  // ✨
+  let minCnt = Math.max(...Object.values(available))
+  let current;
+
+  availableKeys.every(k=>{
+    if(recipe[k] === undefined){
+      return true
+    }
+    if(recipe[k] > available[k]){
+      minCnt = 0
+      return false
+    } else {
+      current = Math.floor(available[k]/recipe[k])
+      minCnt = Math.min(minCnt, current)
+    }
+
+    return true
+  })
+  
+  return minCnt
+}
 
 
 // IMPROVED ✨

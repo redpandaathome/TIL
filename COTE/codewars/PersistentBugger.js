@@ -44,3 +44,19 @@ function persistence(num) {
 
   return count
 }
+
+// 2023.02.09
+// Can be improved if str.length -> integer size comparison like above
+function persistence(num) {
+  //code me
+ num = num.toString()
+ let cnt = 0
+ while( num.length >1 ){
+   num = num.toString().split('').reduce((acc, cur)=>{
+     return acc * cur
+   }, 1)
+   cnt += 1
+   num = num.toString()
+ }
+ return cnt
+}

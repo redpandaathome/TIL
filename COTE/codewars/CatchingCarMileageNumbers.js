@@ -1,5 +1,6 @@
 // https://www.codewars.com/kata/52c4dd683bfd3b434c000292/solutions/javascript
 // Array.from(new Set(arr)) <- to make set to array
+// 🔥🔥🔥🔥🔥
 
 function isInteresting(number, awesomePhrases) {
    // Go to town!
@@ -149,3 +150,159 @@ const test = (n, xs) => n > 99 &&
   
 const isInteresting = (n, xs) =>
   test(n, xs) ? 2 : +(test(n + 1, xs) || test(n + 2, xs))
+
+
+
+
+//2023.02.16 💦💦💦
+function isInteresting(number, awesomePhrases) {
+  // Go to town!
+  console.log("----------------------------------")
+  console.log(number, awesomePhrases)
+  if(number <98) return 0
+  
+  let arr = [number, (number+1), (number+2)]
+  arr = arr.map((e,i)=>{
+    if(e>99 && (isFollowedByAllZeros(e) || isEveryDigitSame(e) || isAwesomePhrases(e, awesomePhrases) || isIncrementing(e) || isDecrementing(e) || isPalindrome(e)) ){
+      return true
+    }
+      
+      return false
+    
+  })
+  console.log(">>>:",arr)
+  let result;
+  if(arr[0]===true) result= 2
+  else if(arr[1]===true || arr[2]===true) result= 1
+  else result= 0
+  console.log("result:",result)
+  return result
+}
+function isFollowedByAllZeros(num){
+  let arr = num.toString().split('').map(e=>parseInt(e));
+  console.log(arr, ", length?", arr.length)
+  for(let i=1; i<arr.length; i++){
+    console.log("💛i:",i, ",arr[i]:", arr[i])
+    console.log(typeof(arr[i]), arr[i])
+    console.log(arr[i]!==0)
+    if(arr[i]!==0){
+      return false;
+    }
+  }
+  console.log("1...returning true")
+  return true;
+}
+
+function isEveryDigitSame(num){
+  let arr = num.toString().split('').map(e=>parseInt(e));
+  let theNum = arr[0];
+  for(let i=1; i<arr.length; i++){
+    if(arr[i]!==theNum)return false;
+  }
+  console.log("2...returning true, theNum:", theNum)
+  
+  return true;
+}
+
+function isIncrementing(num){
+  let arr = num.toString().split('').map(e=>parseInt(e));
+  
+  let theNum = arr[0];
+  for(let i=1; i<arr.length; i++){
+    theNum+=1
+    if(theNum===10) theNum=0;
+    if(arr[i]!==theNum) return false;
+  }
+  console.log("3...returning true")
+  
+  return true;
+}
+
+function isDecrementing(num){
+  let arr = num.toString().split('').map(e=>parseInt(e));
+  
+  let theNum = arr[0];
+  for(let i=1; i<arr.length; i++){
+    theNum-=1
+    if(theNum===-1 && i!==arr.length-1) return false;
+    if(arr[i]!==theNum) return false;
+  }
+  console.log("4...returning true")
+  
+  return true;
+}
+
+function isPalindrome(num){
+  console.log("isPalindrome...", num)
+  let firstPart;
+  let lastPart;
+  let arr = num.toString().split('');
+  if(arr.length%2==0){
+    //0..num/2
+    firstPart = arr.slice(0,arr.length/2)
+    //num/2+1..length-1
+    lastPart = arr.slice(arr.length/2)
+  } else {
+    firstPart = arr.slice(0,Math.floor(arr.length/2))
+    lastPart = arr.slice(Math.floor(arr.length/2)+1)
+  } 
+//   console.log(firstPart, lastPart)
+  if(firstPart.join('') !== lastPart.reverse().join('')) return false
+//   console.log("5...returning true")
+  
+  return true
+}
+function isAwesomePhrases(num, awesomePhrases){
+  if(awesomePhrases.includes(num)) {
+    console.log("6...returning true")
+    return true
+  }
+  return false
+}
+
+
+//Interesting 3! 🔥
+function isPalindrome(number){   
+  return number.toString().length > 2 && 
+          /^(.?)(.?)(.?)(.?)(.?).?\5\4\3\2\1$/.test(number);
+}
+
+function isSequentialAsc(number){    
+  return number.toString().length > 2 &&
+          '1234567890'.indexOf(number) >= 0;  
+}
+
+function isSequentialDesc(number){
+  return number.toString().length > 2 && 
+          '9876543210'.indexOf(number) >= 0;  
+}
+
+function isAwesomePhrase(number, awesomePhrases){
+  return awesomePhrases.some( function(n){ return n==number; } );
+}
+
+function isFollowedByZero(number){ 
+  return  number % 100 == 0 || 
+          number % 1000 == 0 || 
+          number % 10000 == 0;
+}
+
+function isSameDigits(number){
+  return /^(\d)\1{2,4}$/.test(number);
+}
+
+function isInteresting(number, awesomePhrases) {
+  
+  var isInteresting = 0;  
+  
+  for(var i=0; i<3 && !isInteresting && number >= 98 ; ++i, number++){             
+    isInteresting = isPalindrome(number) ||
+                  isSequentialAsc(number) || 
+                  isSequentialDesc(number) ||
+                  isAwesomePhrase(number, awesomePhrases) ||
+                  isFollowedByZero(number) ||
+                  isSameDigits(number) ? (i==0?2:1) : 0;
+  
+  } 
+  return isInteresting;  
+}

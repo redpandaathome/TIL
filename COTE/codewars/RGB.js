@@ -1,4 +1,5 @@
 //https://www.codewars.com/kata/513e08acc600c94f01000001/solutions/javascript
+//https://stackoverflow.com/questions/20486700/why-do-we-always-divide-rgb-values-by-255
 
 function rgb(r, g, b){
    // complete this function  

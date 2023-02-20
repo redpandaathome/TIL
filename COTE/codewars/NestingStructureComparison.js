@@ -30,3 +30,24 @@ Array.prototype.sameStructureAs = function (other) {
      return Array.isArray(el) ? el.sameStructureAs(other[i]) : true;
    }) : false;
 };
+
+
+//2023.02.16
+Array.prototype.sameStructureAs = function (other) {
+  return compare(this, other)
+};
+  
+function compare(a, b){
+  if(a.length !==b.length) return false
+  
+  for(let i=0; i<a.length; i++){
+    if(Array.isArray(a[i]) !== Array.isArray(b[i])){
+      return false
+    }
+    else if(Array.isArray(a[i])){
+        return compare(a[i], b[i])
+      }
+  }
+  return true
+}
+

@@ -44,7 +44,10 @@ function isPangram(string) {
    return alphabetList.every((letter) => string.toLowerCase().includes(letter));
  }
 
- //
+ //✨g modifier: global. All matches (don't return on first match)
+ //✨i modifier: insensitive. Case insensitive match (ignores case of [a-zA-Z])
+ //✨ size for set is not length! set.size
+ //✨ declaring set with array new Set([...arr])
  function isPangram(string) {
    return new Set(string.toLocaleLowerCase().replace(/[^a-z]/gi, '').split('')).size === 26;
  }

@@ -7,6 +7,9 @@ function domainName(url){
    return url.match(regex)[1]
  }
 
+//regex...✨
+//https://github.com/dream-ellie/regex
+//https://regexr.com/5mhou
 // Improved1
 function domainName(url){
    url = url.replace("https://", '');
