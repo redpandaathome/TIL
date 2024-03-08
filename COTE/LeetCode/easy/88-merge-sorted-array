@@ -1,0 +1,22 @@
+// https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+
+// don't know why below did not work 🤔
+// console.log("after splice:",nums1.splice(m, nums1.length-m ,[...nums2]))
+// nums1.splice(m, nums1.length-m ,[...nums2])
+// nums1 = nums1.flat(1).sort()
+// console.log("nums1:",nums1)
+
+// seems like below works
+// var merge = function(nums1, m, nums2, n) {
+//     nums1.splice(m, n,...nums2)
+//     nums1.sort((a,b)=> a-b)
+// };
+
+// what is the difference between ...nums2, [...nums2]?
+
+var merge = function(nums1, m, nums2, n) {
+    for (let i = m, j = 0; j < n; i++, j++) {
+        nums1[i] = nums2[j];
+    }
+    nums1.sort((a, b) => a - b);
+};
